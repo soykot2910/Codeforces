@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    string a;
+    getline(cin,a);
+    int uc=0;
+    int lc=0;
+    for(int i=0; i<a.length(); i++)
+    {
+       if(a[i]>='A' && a[i]<='Z')
+        uc++;
+       else
+        lc++;
+    }
+   if(uc>lc)
+   {
+       transform(a.begin(), a.end(), a.begin(), ::toupper);
+   }else
+   transform(a.begin(), a.end(), a.begin(), ::tolower);
+   cout<<a<<endl;
+    return 0;
+}
