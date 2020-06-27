@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string s;
+    cin>>s;
+    char prev('a');
+    int  c=0;
+    for(int i=0;i<s.size();i++){
+        char start=s[i];
+        int dist=start-prev;
+        if(dist<0)
+            dist +=26;
+         if(dist>13)
+            dist =26-dist;
+        c +=dist;
+        prev=start;
+    }
+    cout<<c<<endl;
+}
