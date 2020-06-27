@@ -1,0 +1,48 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0; i<n; i++)
+    {
+        cin>>a[i];
+    }
+    int sp=0,dp=0,s=1;
+    int l=0,r=n-1;
+    while(l<=r)
+    {
+        if(a[l]>a[r])
+        {
+            if(s==1)
+            {
+                sp +=a[l];
+                s=2;
+            }
+            else
+            {
+                dp +=a[l];
+                s=1;
+            }
+            l++;
+        }
+        else
+        {
+            if(s==1)
+            {
+                sp +=a[r];
+                s=2;
+            }
+            else
+            {
+                dp +=a[r];
+                s=1;
+            }
+            r--;
+        }
+    }
+    cout<<sp<<" "<<dp<<endl;
+    return 0;
+}
