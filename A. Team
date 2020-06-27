@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int n,w=0;
+    cin>>n;
+    int s[4];
+    for(int i=0; i<n; i++)
+    {
+        for(int j=0; j<3; j++)
+        {
+            cin>>s[j];
+        }
+             int c=0;
+        for(int j=0; j<3; j++)
+        {
+            if(s[j]==1)
+            {
+ 
+                c++;
+            }
+        }
+        if(c>=2)
+        {
+            w++;
+        }
+ 
+    }
+ 
+ 
+    cout<<w<<endl;
+}
