@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    string a;
+    getline(cin,a);
+    int len=0;
+    for(int i=0; i<a.length(); i++)
+    {
+        bool appears=false;
+        for(int j=0; j<i; j++)
+        {
+            if(a[i]==a[j])
+            {
+                appears=true;
+                break;
+            }
+ 
+        }
+        if(!appears)
+            len++;
+    }
+    if(len%2!=0)
+        cout<<"IGNORE HIM!\n";
+    else
+        cout<<"CHAT WITH HER!\n";
+    return 0;
+}
