@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int a,b,lw,bw,y=0;
+    cin>>a>>b;
+    lw=a;
+    bw=b;
+ 
+    while(lw<=bw){
+        lw =lw*3;
+        bw =bw*2;
+        y++;
+    }
+    cout<<y<<endl;
+}
