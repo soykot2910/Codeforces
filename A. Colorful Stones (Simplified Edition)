@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    char s[51],t[51];
+    cin>>s>>t;
+    int p=0;
+    for(int i=0; i<strlen(t); i++)
+    {
+            if(t[i]==s[p])
+            {
+                p++;
+            }
+    }
+    cout<<p+1<<endl;
+}
