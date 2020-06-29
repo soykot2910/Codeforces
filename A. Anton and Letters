@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    string le;
+    getline(cin,le);
+    int len=le.size();
+    char cs[len];
+    int j=0;
+    for(int i=0; i<len; i++)
+    {
+        if(le[i]>96 && le[i]<123)
+        {
+            cs[j]=le[i];
+            j++;
+        }
+    }
+    int c=j;
+    sort(cs,cs+j);
+    for(int i=0; i<j-1; i++)
+    {
+        if(cs[i]==cs[i+1])
+            c--;
+    }
+    cout<<c;
